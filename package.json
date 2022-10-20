@@ -1,0 +1,26 @@
+{
+  "name": "team-teamwork",
+  "version": "1.0.0",
+  "description": "OOP Team Profile Generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrdekraker/team-teamwork.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrdekraker/team-teamwork/issues"
+  },
+  "homepage": "https://github.com/mrdekraker/team-teamwork#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^29.2.1"
+  }
+}
