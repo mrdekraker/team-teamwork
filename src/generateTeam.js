@@ -1,7 +1,7 @@
 const generateTeam = (team) => {
   // create manager card
   const generateManager = (manager) => `
-    <div class="card employee-card">
+    <div class="card employee-card mx-3">
       <div class="card-header">
         <h2 class="card-title">${manager.getName()}</h2>
         <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
@@ -18,7 +18,7 @@ const generateTeam = (team) => {
 
   // create engineer card
   const generateEngineer = (engineer) => `
-    <div class="card employee-card">
+    <div class="card employee-card mx-3">
       <div class="card-header">
         <h2 class="card-title">${engineer.getName()}</h2>
         <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
@@ -35,7 +35,7 @@ const generateTeam = (team) => {
 
   // create intern card
   const generateIntern = (intern) => `
-    <div class="card employee-card">
+    <div class="card employee-card mx-3">
       <div class="card-header">
         <h2 class="card-title">${intern.getName()}</h2>
         <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}</h3>
@@ -87,27 +87,39 @@ module.exports = (team) => `
       <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
         <link rel="stylesheet" href="style.css">
         <title>My Team</title>
       </head>
 
       <body>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 jumbotron mb-3 team-heading">
+        <div class="container-fluid banner">
+          <div class="row py-5 jumbotron">
+            <div class="col-12 mx-3 team-heading">
               <h1 class="text-center">My Team</h1>
             </div>
           </div>
         </div>
         <div class="container">
           <div class="row">
-            <div class="team-area col-12 d-flex justify-content-center">
+            <div class="team-area col-12 d-flex justify-content-center my-3">
               ${generateTeam(team)}
             </div>
           </div>
         </div>
+        <style>
+          .banner {
+            background: #23282a;
+            color: #fff;
+          }
+          .jumbotron: {
+            width: 100vw;
+          }
+          .card {
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+          }
+        </style>
       </body>
       </html>
     `;

@@ -9,6 +9,8 @@ const OUTPUT_DIR = path.resolve(__dirname, `dist`);
 const generatePath = path.join(OUTPUT_DIR, `myTeam.html`);
 const generateTeam = require(`./src/generateTeam.js`);
 
+console.log(`Welcome to the Team Profile Generator!`);
+
 // Set up Team Array
 const teamArr = [];
 
@@ -155,20 +157,21 @@ function runApp() {
         buildTeam();
       });
   }
-}
 
-// return to the menu to add another employee
+  // return to the menu to add another employee
 
-// Would you like to add another employee?
-// If yes, return to the menu
-// If no, exit the application, and generate the HTML file using the information provided by the user
+  // Would you like to add another employee?
+  // If yes, return to the menu
+  // If no, exit the application, and generate the HTML file using the information provided by the user
 
-function buildTeamHTML() {
-  if (!fs.existsSync(OUTPUT_DIR)) {
-    fs.mkdirSync(OUTPUT_DIR);
+  function buildTeamHTML() {
+    console.log(`Generating Team Profile...`);
+    fs.writeFileSync(generatePath, generateTeam(teamArr), `UTF-8`);
+    console.log(`Team Profile Generated!`);
   }
-  fs.writeFileSync(generatePath, generateTeam(teamArr), `utf-8`);
+  buildTeam();
 }
+
 runApp();
 
 // GIVEN a command-line application that accepts user input
