@@ -158,12 +158,6 @@ function runApp() {
       });
   }
 
-  // return to the menu to add another employee
-
-  // Would you like to add another employee?
-  // If yes, return to the menu
-  // If no, exit the application, and generate the HTML file using the information provided by the user
-
   function buildTeamHTML() {
     console.log(`Generating Team Profile...`);
     fs.writeFileSync(generatePath, generateTeam(teamArr), `UTF-8`);
