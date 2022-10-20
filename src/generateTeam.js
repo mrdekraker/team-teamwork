@@ -1,4 +1,4 @@
-const generateHTML = (team) => {
+const generateTeam = (team) => {
   // create manager card
   const generateManager = (manager) => `
     <div class="card employee-card">
