@@ -21,6 +21,8 @@
 
 The project was designed to generate an easy to read webpage of employee information within a team.
 
+Video demonstration: [YouTube Link](https://youtu.be/Y42I8XlES94)
+
 ---
 
 ## License
