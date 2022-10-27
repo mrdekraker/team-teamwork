@@ -113,7 +113,7 @@ module.exports = (team) => `
             background: #23282a;
             color: #fff;
           }
-          .jumbotron: {
+          .jumbotron {
             width: 100vw;
           }
           .card {
