@@ -50,5 +50,5 @@ test(`Test for role`, () => {
     1350,
     `iheartpohtaytohs@gondor.com`
   );
-  expect(employee.getRole()).toBe(role);
+  expect(employee.getRole()).toEqual(`Employee`);
 });
